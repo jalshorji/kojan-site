@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integritetspolicy — Barnens Värld</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: #2d2d2d;
+      background: #faf8ff;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #7C5CE0, #a78bfa);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
+
+    header a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    h2 {
+      color: #7C5CE0;
+      font-size: 1.3rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    p, li {
+      color: #444;
+      margin-bottom: 0.8rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight {
+      background: #f0ebff;
+      border-left: 4px solid #7C5CE0;
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.7rem;
+      border-bottom: 1px solid #e5e0f0;
+    }
+
+    th {
+      background: #f5f0ff;
+      color: #7C5CE0;
+      font-weight: 700;
+    }
+
+    footer {
+      background: #2d2d2d;
+      color: #aaa;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #c4b5fd;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 2rem 1.2rem; }
+      header h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Integritetspolicy</h1>
+  <p>Barnens Värld — <a href="index.html">tillbaka till startsidan</a></p>
+</header>
+
+<main>
+
+  <p><strong>Senast uppdaterad:</strong> 24 april 2026</p>
+
+  <p>Barnens Värld ("appen", "vi", "oss") är en svensk barnapp utvecklad av JA Code. Vi tar barns integritet på allvar. Denna policy beskriver vilken information vi samlar in, hur vi använder den och vilka rättigheter du har.</p>
+
+  <div class="highlight">
+    <strong>Kort sammanfattning:</strong> Vi samlar in så lite data som möjligt. I demo-läge samlas ingen personlig data in alls — allt lagras lokalt på din enhet.
+  </div>
+
+  <h2>1. Ansvarig</h2>
+  <p>
+    JA Code<br>
+    E-post: <a href="mailto:info@jacode.se">info@jacode.se</a><br>
+    Land: Sverige
+  </p>
+
+  <h2>2. Demo-läge (utan konto)</h2>
+  <p>I demo-läge samlas <strong>ingen personlig data</strong> in. All information (barnprofiler, framsteg, sparade sagor) lagras lokalt på enheten via AsyncStorage och skickas aldrig till våra servrar.</p>
+  <ul>
+    <li>Inget konto krävs</li>
+    <li>Ingen data skickas till servrar</li>
+    <li>Ingen spårning eller analys</li>
+    <li>Data raderas om appen avinstalleras</li>
+  </ul>
+
+  <h2>3. Premium-läge (med konto)</h2>
+  <p>Om du skapar ett konto via Google-inloggning samlar vi in följande:</p>
+
+  <table>
+    <tr>
+      <th>Data</th>
+      <th>Syfte</th>
+      <th>Lagring</th>
+    </tr>
+    <tr>
+      <td>E-postadress (från Google)</td>
+      <td>Identifiering och inloggning</td>
+      <td>Krypterad i vår databas</td>
+    </tr>
+    <tr>
+      <td>Visningsnamn (från Google)</td>
+      <td>Visas i appen</td>
+      <td>Krypterad i vår databas</td>
+    </tr>
+    <tr>
+      <td>Barnprofiler (namn, ålder)</td>
+      <td>Anpassa innehåll efter ålder</td>
+      <td>Krypterad i vår databas</td>
+    </tr>
+    <tr>
+      <td>Aktivitetsdata (stjärnor, streak)</td>
+      <td>Visa framsteg och belöningar</td>
+      <td>Krypterad i vår databas</td>
+    </tr>
+  </table>
+
+  <h2>4. AI-genererat innehåll</h2>
+  <p>Appen använder AI-tjänster för att skapa personliga sagor:</p>
+  <ul>
+    <li><strong>Anthropic Claude</strong> — genererar sagor baserat på barnets ålder, valt djur och plats</li>
+    <li><strong>Google Gemini</strong> — genererar gåtor och rim</li>
+  </ul>
+  <p>Barnets namn skickas <strong>inte</strong> till AI-tjänsterna. Vi skickar bara ålder och valda teman (t.ex. "groda" + "skog" + "ålder 4") för att generera innehåll.</p>
+
+  <h2>5. Tredjepartstjänster</h2>
+  <table>
+    <tr>
+      <th>Tjänst</th>
+      <th>Syfte</th>
+      <th>Integritetspolicy</th>
+    </tr>
+    <tr>
+      <td>Google Sign-In</td>
+      <td>Inloggning (valfritt)</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td>Anthropic (Claude)</td>
+      <td>AI-sagor</td>
+      <td><a href="https://www.anthropic.com/privacy" target="_blank">Anthropic Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td>Google (Gemini)</td>
+      <td>AI-gåtor och rim</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
+    </tr>
+  </table>
+
+  <h2>6. Barns integritet</h2>
+  <p>Barnens Värld är utformad för barn 2–6 år och vi följer tillämpliga lagar kring barns integritet:</p>
+  <ul>
+    <li>Vi samlar <strong>inte</strong> in data direkt från barn — all kontohantering sker via föräldern</li>
+    <li>Barn interagerar med appen men skapar aldrig egna konton</li>
+    <li>Ingen reklam visas i appen</li>
+    <li>Ingen beteendespårning eller profilering av barn</li>
+    <li>Vi säljer aldrig data till tredje part</li>
+  </ul>
+
+  <h2>7. Datalagring och säkerhet</h2>
+  <ul>
+    <li>All kommunikation sker via HTTPS (krypterad)</li>
+    <li>Lösenord lagras aldrig — vi använder Google OAuth</li>
+    <li>JWT-tokens används för sessionshantering med utgångstid</li>
+    <li>Databasen är krypterad i vila</li>
+  </ul>
+
+  <h2>8. Dina rättigheter (GDPR)</h2>
+  <p>Som EU-medborgare har du följande rättigheter:</p>
+  <ul>
+    <li><strong>Tillgång</strong> — begär en kopia av din data</li>
+    <li><strong>Rättelse</strong> — korrigera felaktig information</li>
+    <li><strong>Radering</strong> — begär att vi raderar all din data</li>
+    <li><strong>Portabilitet</strong> — få din data i ett maskinläsbart format</li>
+    <li><strong>Invändning</strong> — invända mot behandling av din data</li>
+  </ul>
+  <p>Kontakta oss på <a href="mailto:info@jacode.se">info@jacode.se</a> för att utöva dina rättigheter. Vi svarar inom 30 dagar.</p>
+
+  <h2>9. Radering av konto och data</h2>
+  <p>Du kan begära att vi raderar ditt konto och all tillhörande data genom att:</p>
+  <ul>
+    <li>Kontakta oss via e-post: <a href="mailto:info@jacode.se">info@jacode.se</a></li>
+    <li>All data raderas inom 30 dagar efter begäran</li>
+  </ul>
+
+  <h2>10. Cookies och spårning</h2>
+  <p>Appen använder <strong>inga cookies</strong> och ingen spårningsteknik (inga analytics, inga annons-SDK:er).</p>
+
+  <h2>11. Ändringar i policyn</h2>
+  <p>Vid väsentliga ändringar meddelar vi via appen. Datumet "senast uppdaterad" ovan visar när policyn senast ändrades.</p>
+
+  <h2>12. Kontakt</h2>
+  <p>
+    Har du frågor om vår integritetspolicy? Kontakta oss:<br>
+    <strong>E-post:</strong> <a href="mailto:info@jacode.se">info@jacode.se</a>
+  </p>
+
+</main>
+
+<footer>
+  <p><a href="index.html">Barnens Värld</a> &middot; <a href="mailto:info@jacode.se">info@jacode.se</a></p>
+  <p>&copy; 2026 JA Code. Alla rättigheter förbehållna.</p>
+</footer>
+
+</body>
+</html>

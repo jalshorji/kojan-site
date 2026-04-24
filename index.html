@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barnens Värld — Personliga sagor och lek för barn 2-6 år</title>
+  <meta name="description" content="Barnens Värld skapar personliga sagor, gåtor och rim för ditt barn. Svensk barnapp med AI-genererade godnattsagor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: #2d2d2d;
+      background: #faf8ff;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #7C5CE0 0%, #a78bfa 50%, #c4b5fd 100%);
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: #faf8ff;
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+
+    .hero-emoji {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .hero h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .hero p.tagline {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .store-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      padding: 0.8rem 1.5rem;
+      border-radius: 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.3s;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .store-badge:hover {
+      background: rgba(255,255,255,0.35);
+    }
+
+    .features {
+      padding: 5rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .features h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #7C5CE0;
+      margin-bottom: 3rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(124, 92, 224, 0.08);
+      transition: transform 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .feature-card .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      color: #7C5CE0;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .how-it-works {
+      background: linear-gradient(135deg, #f5f0ff 0%, #ede8ff 100%);
+      padding: 5rem 2rem;
+    }
+
+    .how-it-works h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #7C5CE0;
+      margin-bottom: 3rem;
+    }
+
+    .steps {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: white;
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(124, 92, 224, 0.06);
+    }
+
+    .step-number {
+      background: #7C5CE0;
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .step-text h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .step-text p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      color: #7C5CE0;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: #666;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #7C5CE0;
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .cta-button:hover {
+      background: #6a4bc9;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #2d2d2d;
+      color: #aaa;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #c4b5fd;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      margin: 0 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p.tagline { font-size: 1.1rem; }
+      .hero-emoji { font-size: 3rem; }
+      .features, .cta-section { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-emoji">✨📖</div>
+    <h1>Barnens Värld</h1>
+    <p class="tagline">Personliga sagor, gåtor och rim för barn 2–6 år</p>
+    <div class="badge-row">
+      <a href="#" class="store-badge">Google Play — Kommer snart</a>
+      <a href="#" class="store-badge">App Store — Kommer snart</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Allt i en app</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="emoji">📖</div>
+        <h3>AI-sagor</h3>
+        <p>Skapa unika godnattsagor med ditt barns favoritdjur. Varje saga är personlig och åldersanpassad.</p>
+      </div>
+      <div class="feature-card">
+        <div class="emoji">🤔</div>
+        <h3>Gåtor</h3>
+        <p>Hundratals roliga gåtor som utmanar och underhåller. Perfekt för bilturer och väntetider.</p>
+      </div>
+      <div class="feature-card">
+        <div class="emoji">🎵</div>
+        <h3>Rim och ramsor</h3>
+        <p>Klassiska och nya rim som tränar språket på ett lekfullt sätt.</p>
+      </div>
+      <div class="feature-card">
+        <div class="emoji">🗺️</div>
+        <h3>Äventyr</h3>
+        <p>Dagliga uppdrag som får barnen att röra sig, skapa och utforska.</p>
+      </div>
+      <div class="feature-card">
+        <div class="emoji">🌅</div>
+        <h3>Morgonrutiner</h3>
+        <p>Gör morgonen roligare med checklistor som barnen själva bockar av.</p>
+      </div>
+      <div class="feature-card">
+        <div class="emoji">😌</div>
+        <h3>Lugna hörnan</h3>
+        <p>Andningsövningar och lugna aktiviteter när allt blir lite mycket.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>Så funkar det</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-text">
+          <h3>Ladda ner appen</h3>
+          <p>Prova gratis direkt — inget konto behövs för demo-läge.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-text">
+          <h3>Lägg till dina barn</h3>
+          <p>Namn, ålder och favoritdjur — allt anpassas efter varje barn.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-text">
+          <h3>Utforska tillsammans</h3>
+          <p>Sagor, gåtor, rim, äventyr — nytt innehåll varje dag.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Redo att börja?</h2>
+    <p>Prova Barnens Värld gratis med demo-läge. Inget konto behövs.</p>
+    <a href="#" class="cta-button">Ladda ner nu</a>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Integritetspolicy</a>
+      <a href="mailto:info@jacode.se">Kontakt</a>
+    </div>
+    <p>&copy; 2026 JA Code. Alla rättigheter förbehållna.</p>
+  </footer>
+
+</body>
+</html>
