@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barnens Värld — Personliga sagor och lek för barn 2-6 år</title>
   <meta name="description" content="Barnens Värld skapar personliga sagor, gåtor och rim för ditt barn. Svensk barnapp med AI-genererade godnattsagor.">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
   <style>
@@ -41,10 +43,13 @@
       clip-path: ellipse(55% 100% at 50% 100%);
     }
 
-    .hero-emoji {
-      font-size: 4rem;
-      margin-bottom: 1rem;
+    .hero-icon {
+      width: 140px;
+      height: 140px;
+      border-radius: 32px;
+      margin-bottom: 1.5rem;
       animation: float 3s ease-in-out infinite;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
     }
 
     @keyframes float {
@@ -263,7 +268,7 @@
 <body>
 
   <section class="hero">
-    <div class="hero-emoji">✨📖</div>
+    <img src="icon.png" alt="Barnens Värld" class="hero-icon">
     <h1>Barnens Värld</h1>
     <p class="tagline">Personliga sagor, gåtor och rim för barn 2–6 år</p>
     <div class="badge-row">
