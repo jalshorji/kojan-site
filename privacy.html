@@ -16,32 +16,53 @@
       line-height: 1.7;
     }
 
-    header {
-      background: linear-gradient(135deg, #7C5CE0, #a78bfa);
+    .topbar {
+      background: #7C5CE0;
+      padding: 0.8rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .topbar a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .topbar a:hover {
       color: white;
-      padding: 2rem;
-      text-align: center;
     }
 
-    header h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.3rem;
+    .topbar .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    header p {
-      opacity: 0.9;
-      font-size: 0.95rem;
-    }
-
-    header a {
-      color: white;
-      text-decoration: underline;
+    .topbar .logo img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
     }
 
     main {
       max-width: 750px;
       margin: 0 auto;
       padding: 3rem 2rem;
+    }
+
+    main > h1 {
+      color: #7C5CE0;
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .meta {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
     }
 
     h2 {
@@ -117,14 +138,15 @@
 </head>
 <body>
 
-<header>
-  <h1>Integritetspolicy</h1>
-  <p>Barnens Värld — <a href="index.html">tillbaka till startsidan</a></p>
-</header>
+<nav class="topbar">
+  <a href="index.html" class="logo"><img src="icon.png" alt="">Barnens Värld</a>
+  <a href="index.html">&larr; Tillbaka</a>
+</nav>
 
 <main>
 
-  <p><strong>Senast uppdaterad:</strong> 24 april 2026</p>
+  <h1>Integritetspolicy</h1>
+  <p class="meta">Senast uppdaterad: 24 april 2026</p>
 
   <p>Barnens Värld ("appen", "vi", "oss") är en svensk barnapp utvecklad av JA Code. Vi tar barns integritet på allvar. Denna policy beskriver vilken information vi samlar in, hur vi använder den och vilka rättigheter du har.</p>
 
