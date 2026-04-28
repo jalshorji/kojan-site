@@ -146,12 +146,12 @@
 <main>
 
   <h1>Integritetspolicy</h1>
-  <p class="meta">Senast uppdaterad: 24 april 2026</p>
+  <p class="meta">Senast uppdaterad: 28 april 2026</p>
 
   <p>Barnens Värld ("appen", "vi", "oss") är en svensk barnapp utvecklad av JA Code. Vi tar barns integritet på allvar. Denna policy beskriver vilken information vi samlar in, hur vi använder den och vilka rättigheter du har.</p>
 
   <div class="highlight">
-    <strong>Kort sammanfattning:</strong> Vi samlar in så lite data som möjligt. I demo-läge samlas ingen personlig data in alls — allt lagras lokalt på din enhet.
+    <strong>Kort sammanfattning:</strong> Vi samlar in minimal data. I demo-läge samlas ingen personlig data in alls. I premium-läge delar vi barnets förnamn och ålder med AI-tjänster (Claude och Gemini) för att skapa personliga sagor — men ingen annan personlig information.
   </div>
 
   <h2>1. Ansvarig</h2>
@@ -199,43 +199,113 @@
       <td>Visa framsteg och belöningar</td>
       <td>Krypterad i vår databas</td>
     </tr>
+    <tr>
+      <td>Sparade sagor (titel, innehåll)</td>
+      <td>Visa barnets favoritberättelser</td>
+      <td>Krypterad i vår databas</td>
+    </tr>
+    <tr>
+      <td>AI-användning (tokens, tidsstämplar)</td>
+      <td>Spåra gränser och kostnadskontroll</td>
+      <td>Anonymiserad loggning</td>
+    </tr>
   </table>
 
+  <h3>Prenumerationsnivåer</h3>
+  <ul>
+    <li><strong>BETA (30 dagar gratis):</strong> 10 AI-genererade sagor totalt under testperioden</li>
+    <li><strong>PREMIUM (29 kr/mån eller 299 kr/år):</strong> 30 AI-genererade sagor per månad</li>
+  </ul>
+
   <h2>4. AI-genererat innehåll</h2>
-  <p>Appen använder AI-teknik för att skapa personliga sagor. Innehållet genereras baserat på barnets ålder och valda teman (t.ex. djur och plats).</p>
-  <p>Barnets namn skickas <strong>inte</strong> till AI-tjänsterna. Vi skickar bara ålder och valda teman för att generera innehåll. Ingen personlig information om barnet används i genereringen.</p>
+  <p>Appen använder AI-teknik (Claude från Anthropic och Gemini från Google) för att skapa personliga sagor, gåtor och äventyr.</p>
+
+  <p><strong>Vad skickas till AI-tjänsterna:</strong></p>
+  <ul>
+    <li>Barnets förnamn — används för att personalisera berättelsen</li>
+    <li>Barnets ålder — för att anpassa språknivå och innehåll</li>
+    <li>Valda teman (djur, plats, stämning)</li>
+    <li>Syskonnamn (om flerbarnsläge används)</li>
+  </ul>
+
+  <p><strong>Vad skickas INTE:</strong></p>
+  <ul>
+    <li>Efternamn</li>
+    <li>E-postadresser</li>
+    <li>Geografisk plats</li>
+    <li>Bilder eller foton</li>
+    <li>Någon annan personlig information</li>
+  </ul>
+
+  <p><strong>Datalagring hos AI-tjänsterna:</strong> Enligt Anthropics och Googles integritetspolicyer lagras inte data som skickas via deras API:er för träning av AI-modeller. Genererat innehåll sparas i vår egen databas för att du ska kunna återbesöka sparade sagor.</p>
+
+  <p><strong>AI-användningsgränser:</strong> BETA-användare: 10 sagor totalt. PREMIUM-användare: 30 sagor per månad.</p>
 
   <h2>5. Tredjepartstjänster</h2>
   <table>
     <tr>
       <th>Tjänst</th>
       <th>Syfte</th>
+      <th>Data som delas</th>
       <th>Integritetspolicy</th>
     </tr>
     <tr>
       <td>Google Sign-In</td>
-      <td>Inloggning (valfritt)</td>
-      <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
+      <td>Inloggning</td>
+      <td>E-post, visningsnamn</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
+    </tr>
+    <tr>
+      <td>Claude AI (Anthropic)</td>
+      <td>Generera sagor</td>
+      <td>Barnnamn, ålder, teman</td>
+      <td><a href="https://www.anthropic.com/privacy" target="_blank">Anthropic Privacy</a></td>
+    </tr>
+    <tr>
+      <td>Gemini AI (Google)</td>
+      <td>Generera gåtor, rim, äventyr</td>
+      <td>Barnnamn, ålder, teman</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
+    </tr>
+    <tr>
+      <td>RevenueCat</td>
+      <td>Hantera prenumerationer</td>
+      <td>Köpinformation (via App Store/Google Play)</td>
+      <td><a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy</a></td>
+    </tr>
+    <tr>
+      <td>Railway (hosting)</td>
+      <td>Serverdrift och databas</td>
+      <td>All serverlagrad data</td>
+      <td><a href="https://railway.app/legal/privacy" target="_blank">Railway Privacy</a></td>
     </tr>
   </table>
 
+  <p><strong>Viktigt:</strong> Alla AI-tjänster vi använder (Claude och Gemini) har policyer som säger att data som skickas via deras API:er inte används för att träna modeller. Ditt barns namn används endast för att generera den specifika berättelsen och raderas därefter från AI-tjänsternas system.</p>
+
   <h2>6. Barns integritet</h2>
-  <p>Barnens Värld är utformad för barn 2–6 år och vi följer tillämpliga lagar kring barns integritet:</p>
+  <p>Barnens Värld är utformad för barn 2–6 år och vi följer tillämpliga lagar kring barns integritet (GDPR, COPPA-principer):</p>
   <ul>
     <li>Vi samlar <strong>inte</strong> in data direkt från barn — all kontohantering sker via föräldern</li>
     <li>Barn interagerar med appen men skapar aldrig egna konton</li>
+    <li><strong>Förälderns samtycke:</strong> Genom att skapa barnprofiler och använda AI-funktioner samtycker föräldern till att barnets förnamn och ålder delas med våra AI-tjänster (Claude, Gemini) för att generera personligt innehåll</li>
     <li>Ingen reklam visas i appen</li>
     <li>Ingen beteendespårning eller profilering av barn</li>
     <li>Vi säljer aldrig data till tredje part</li>
+    <li><strong>Minimal datadelning:</strong> Endast förnamn och ålder — aldrig efternamn, adress, skola eller annan identifierbar information</li>
   </ul>
 
   <h2>7. Datalagring och säkerhet</h2>
   <ul>
-    <li>All kommunikation sker via HTTPS (krypterad)</li>
-    <li>Lösenord lagras aldrig — vi använder Google OAuth</li>
-    <li>JWT-tokens används för sessionshantering med utgångstid</li>
-    <li>Databasen är krypterad i vila</li>
+    <li><strong>Kryptering:</strong> All kommunikation sker via HTTPS (TLS 1.3)</li>
+    <li><strong>Lösenord:</strong> Vi lagrar aldrig lösenord — endast Google OAuth</li>
+    <li><strong>Sessioner:</strong> JWT access tokens (giltig 24h) + refresh tokens (giltig 90 dagar)</li>
+    <li><strong>Databas:</strong> PostgreSQL med kryptering i vila, hosted på Railway (EU/US)</li>
+    <li><strong>Backup:</strong> Automatiska dagliga säkerhetskopior</li>
+    <li><strong>Access control:</strong> All data är kopplad till användar-ID — du ser bara din egen data</li>
   </ul>
+
+  <p><strong>Dataplacering:</strong> Våra servrar körs på Railway med datacenters i USA. Railway är SOC 2-certifierade och följer branschstandarder för säkerhet.</p>
 
   <h2>8. Dina rättigheter (GDPR)</h2>
   <p>Som EU-medborgare har du följande rättigheter:</p>
@@ -256,7 +326,9 @@
   </ul>
 
   <h2>10. Cookies och spårning</h2>
-  <p>Appen använder <strong>inga cookies</strong> och ingen spårningsteknik (inga analytics, inga annons-SDK:er).</p>
+  <p>Vi använder <strong>inga cookies, analytics eller annons-SDK:er</strong>. Vi spårar inte ditt beteende.</p>
+
+  <p><strong>Lokal lagring:</strong> Appen använder AsyncStorage (lokalt på din enhet) för att spara inloggningstoken och app-inställningar. Detta raderas om du avinstallerar appen.</p>
 
   <h2>11. Ändringar i policyn</h2>
   <p>Vid väsentliga ändringar meddelar vi via appen. Datumet "senast uppdaterad" ovan visar när policyn senast ändrades.</p>
