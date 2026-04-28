@@ -257,11 +257,124 @@
       margin: 0 1rem;
     }
 
+    .pricing {
+      padding: 5rem 2rem;
+      background: white;
+    }
+
+    .pricing h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #7C5CE0;
+      margin-bottom: 3rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      background: white;
+      border: 2px solid #e5e0f0;
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(124, 92, 224, 0.15);
+    }
+
+    .pricing-card.featured {
+      border: 3px solid #7C5CE0;
+      background: linear-gradient(135deg, #faf8ff 0%, #f5f0ff 100%);
+      transform: scale(1.05);
+    }
+
+    .pricing-card.featured:hover {
+      transform: scale(1.05) translateY(-8px);
+    }
+
+    .badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #7C5CE0, #a78bfa);
+      color: white;
+      padding: 0.4rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(124, 92, 224, 0.3);
+    }
+
+    .pricing-emoji {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-card h3 {
+      font-size: 1.5rem;
+      color: #7C5CE0;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #2d2d2d;
+      margin-bottom: 0.3rem;
+    }
+
+    .price span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #666;
+    }
+
+    .price-desc {
+      color: #888;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      min-height: 1.5rem;
+    }
+
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .pricing-features li {
+      padding: 0.6rem 0;
+      color: #555;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+
     @media (max-width: 600px) {
       .hero h1 { font-size: 2.2rem; }
       .hero p.tagline { font-size: 1.1rem; }
       .hero-emoji { font-size: 3rem; }
       .features, .cta-section { padding: 3rem 1.5rem; }
+      .pricing-card.featured {
+        transform: scale(1);
+      }
+      .pricing-card.featured:hover {
+        transform: translateY(-8px);
+      }
     }
   </style>
 </head>
@@ -340,29 +453,46 @@
     </div>
   </section>
 
-  <section class="how-it-works" style="background: white; padding: 4rem 2rem;">
-    <h2>Priser</h2>
-    <div class="steps" style="max-width: 600px;">
-      <div class="step">
-        <div class="step-text" style="text-align: center; width: 100%;">
-          <h3 style="font-size: 1.4rem; color: #7C5CE0; margin-bottom: 0.5rem;">Demo — Gratis</h3>
-          <p style="font-size: 1rem; margin-bottom: 0.3rem;">Prova direkt utan konto</p>
-          <p style="font-size: 0.9rem; color: #999;">Begränsat innehåll, sparas lokalt</p>
-        </div>
+  <section class="pricing">
+    <h2>Välj din plan</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-emoji">🎈</div>
+        <h3>Demo</h3>
+        <div class="price">Gratis</div>
+        <p class="price-desc">Prova direkt</p>
+        <ul class="pricing-features">
+          <li>✓ Inget konto behövs</li>
+          <li>✓ 3 demo-barn</li>
+          <li>✓ Begränsat innehåll</li>
+          <li>✓ Lokalt sparat</li>
+        </ul>
       </div>
-      <div class="step">
-        <div class="step-text" style="text-align: center; width: 100%;">
-          <h3 style="font-size: 1.4rem; color: #7C5CE0; margin-bottom: 0.5rem;">BETA — 30 dagar gratis</h3>
-          <p style="font-size: 1rem; margin-bottom: 0.3rem;">10 AI-genererade sagor totalt</p>
-          <p style="font-size: 0.9rem; color: #999;">Testa alla funktioner under 30 dagar</p>
-        </div>
+      <div class="pricing-card">
+        <div class="pricing-emoji">🌟</div>
+        <h3>BETA</h3>
+        <div class="price">0 kr</div>
+        <p class="price-desc">30 dagar gratis</p>
+        <ul class="pricing-features">
+          <li>✓ 10 AI-sagor totalt</li>
+          <li>✓ Alla funktioner</li>
+          <li>✓ Obegränsat barn</li>
+          <li>✓ Cloud-synkat</li>
+        </ul>
       </div>
-      <div class="step">
-        <div class="step-text" style="text-align: center; width: 100%;">
-          <h3 style="font-size: 1.4rem; color: #7C5CE0; margin-bottom: 0.5rem;">Premium — 29 kr/månad</h3>
-          <p style="font-size: 1rem; margin-bottom: 0.3rem;">30 AI-sagor per månad + full tillgång</p>
-          <p style="font-size: 0.9rem; color: #999;">Eller 299 kr/år (spara 50 kr)</p>
-        </div>
+      <div class="pricing-card featured">
+        <div class="badge">Populärast</div>
+        <div class="pricing-emoji">✨</div>
+        <h3>Premium</h3>
+        <div class="price">29 kr<span>/månad</span></div>
+        <p class="price-desc">Eller 299 kr/år (spara 50 kr)</p>
+        <ul class="pricing-features">
+          <li>✓ 30 AI-sagor/månad</li>
+          <li>✓ Alla funktioner</li>
+          <li>✓ Obegränsat barn</li>
+          <li>✓ Cloud-synkat</li>
+          <li>✓ Prioriterad support</li>
+        </ul>
       </div>
     </div>
   </section>
