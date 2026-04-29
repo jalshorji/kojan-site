@@ -71,6 +71,21 @@
       opacity: 0.95;
     }
 
+    .hero-desc {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .hero-trial {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      opacity: 0.85;
+    }
+
     .badge-row {
       display: flex;
       gap: 1rem;
@@ -376,6 +391,169 @@
       border-bottom: none;
     }
 
+    .pricing-intro {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-note {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #888;
+      margin-top: 2rem;
+      font-style: italic;
+    }
+
+    .pain-points {
+      padding: 4rem 2rem;
+      background: #FFF9F0;
+      text-align: center;
+    }
+
+    .pain-points h2 {
+      font-size: 2rem;
+      color: #7C5CE0;
+      margin-bottom: 2rem;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+    }
+
+    .pain-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .pain-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .pain-text {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    .solution-box {
+      background: linear-gradient(135deg, #7C5CE0, #a78bfa);
+      color: white;
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: 0 8px 24px rgba(124, 92, 224, 0.2);
+    }
+
+    .solution-box h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .solution-box p {
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    .testimonials {
+      padding: 5rem 2rem;
+      background: white;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #7C5CE0;
+      margin-bottom: 3rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: #F5F0FF;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(124, 92, 224, 0.08);
+    }
+
+    .stars {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-size: 0.95rem;
+      color: #888;
+      font-weight: 600;
+    }
+
+    .faq {
+      padding: 5rem 2rem;
+      background: #F5F0FF;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #7C5CE0;
+      margin-bottom: 3rem;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px rgba(124, 92, 224, 0.06);
+    }
+
+    .faq-item h3 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-item p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .cta-note {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 1rem;
+    }
+
     @media (max-width: 600px) {
       .hero h1 { font-size: 2.2rem; }
       .hero p.tagline { font-size: 1.1rem; }
@@ -395,10 +573,41 @@
   <section class="hero">
     <img src="icon.png" alt="Kojan" class="hero-icon">
     <h1>Kojan</h1>
-    <p class="tagline">Personliga sagor, gåtor och rim för barn 2–6 år</p>
+    <p class="tagline">Unika godnattsagor – skapade för ditt barn</p>
+    <p class="hero-desc">
+      Varje kväll får ditt barn välja: En groda på slottet? En häst i rymden?<br>
+      På 30 sekunder skapar AI:n en personlig saga – med barnets namn.
+    </p>
     <div class="badge-row">
-      <a href="#" class="store-badge">Google Play — Kommer snart</a>
-      <a href="#" class="store-badge">App Store — Kommer snart</a>
+      <a href="https://play.google.com/store/apps/details?id=se.jacode.koja" class="store-badge">
+        📱 Ladda ner för Android
+      </a>
+      <a href="https://apps.apple.com/se/app/kojan/idXXXXXX" class="store-badge">
+        🍎 Ladda ner för iOS
+      </a>
+    </div>
+    <p class="hero-trial">🎁 7 dagar gratis • 3 AI-sagor • Ingen bindning</p>
+  </section>
+
+  <section class="pain-points">
+    <h2>Känner du igen dig?</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-emoji">😩</div>
+        <p class="pain-text">"Samma saga. Varje. Kväll. Igen."</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-emoji">🤷</div>
+        <p class="pain-text">"Jag orkar inte hitta på själv kl 20.30..."</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-emoji">🦖</div>
+        <p class="pain-text">"Hen vill ha en saga om dinosaurier OCH rymden"</p>
+      </div>
+    </div>
+    <div class="solution-box">
+      <h3>✅ Med Kojan väljer barnet – AI:n skapar – du läser upp</h3>
+      <p>Nya sagor varje kväll (eller samma 10 gånger, vi dömer inte)</p>
     </div>
   </section>
 
@@ -438,6 +647,39 @@
     </div>
   </section>
 
+  <section class="testimonials">
+    <h2>Vad svenska föräldrar säger</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">
+          "Noah ville ha 'en hund som hittar en skatt på stranden'.
+          AI:n skapade en 8-sidors saga med humor och en fin vändning.
+          Han bad om den 5 kvällar i rad!"
+        </p>
+        <p class="testimonial-author">– Emma, Stockholm</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">
+          "Bästa investeringen för läggdagsrutinen.
+          29 kr är billigare än en barnbok, och sagorna är helt unika!"
+        </p>
+        <p class="testimonial-author">– Matteo, Göteborg</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">
+          "Godnattsaga-läget är magiskt – mörkt UI, stjärnor, lugn musik.
+          Ella somnar mitt i sagan varje gång."
+        </p>
+        <p class="testimonial-author">– Lisa, Malmö</p>
+      </div>
+    </div>
+  </section>
+
   <section class="how-it-works">
     <h2>Så funkar det</h2>
     <div class="steps">
@@ -466,40 +708,51 @@
   </section>
 
   <section class="pricing">
-    <h2>Välj din plan</h2>
+    <h2>Transparent prissättning</h2>
+    <p class="pricing-intro">Prova gratis i 7 dagar – ingen bindning</p>
+
     <div class="pricing-grid">
+      <!-- Trial (FREE) -->
       <div class="pricing-card">
-        <div class="pricing-emoji">🎈</div>
-        <h3>Demo</h3>
-        <div class="price">Gratis</div>
-        <p class="price-desc">Prova direkt</p>
+        <div class="pricing-emoji">🎁</div>
+        <h3>Provperiod</h3>
+        <div class="price">Gratis<span></span></div>
+        <p class="price-desc">7 dagar • 3 AI-sagor</p>
         <ul class="pricing-features">
-          <li>✓ Inget konto behövs</li>
-          <li>✓ 3 demo-barn</li>
-          <li>✓ Begränsat innehåll</li>
-          <li>✓ Lokalt sparat</li>
-        </ul>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-emoji">🌟</div>
-        <h3>BETA</h3>
-        <div class="price">0 kr</div>
-        <p class="price-desc">30 dagar gratis</p>
-        <ul class="pricing-features">
-          <li>✓ 10 AI-sagor totalt</li>
-          <li>✓ Alla funktioner</li>
+          <li>✓ Testa alla funktioner</li>
+          <li>✓ 3 AI-genererade sagor</li>
           <li>✓ Obegränsat barn</li>
-          <li>✓ Cloud-synkat</li>
+          <li>✓ Ingen bindning</li>
         </ul>
       </div>
+
+      <!-- Monthly (FEATURED) -->
       <div class="pricing-card featured">
         <div class="badge">Populärast</div>
         <div class="pricing-emoji">✨</div>
-        <h3>Premium</h3>
+        <h3>Månad</h3>
         <div class="price">29 kr<span>/månad</span></div>
-        <p class="price-desc">eller <strong style="color: #7C5CE0;">299 kr/år</strong> <span class="save-badge">Spara 50 kr</span></p>
+        <p class="price-desc">Avsluta när som helst</p>
         <ul class="pricing-features">
           <li>✓ 30 AI-sagor/månad</li>
+          <li>✓ Alla funktioner</li>
+          <li>✓ Obegränsat barn</li>
+          <li>✓ Cloud-synkat</li>
+          <li>✓ Ingen reklam</li>
+        </ul>
+      </div>
+
+      <!-- Yearly (BEST VALUE) -->
+      <div class="pricing-card">
+        <div class="pricing-emoji">💎</div>
+        <h3>År</h3>
+        <div class="price">299 kr<span>/år</span></div>
+        <p class="price-desc">
+          <strong style="color: #7C5CE0;">25 kr/mån</strong>
+          <span class="save-badge">Spara 50 kr</span>
+        </p>
+        <ul class="pricing-features">
+          <li>✓ 360 AI-sagor/år</li>
           <li>✓ Alla funktioner</li>
           <li>✓ Obegränsat barn</li>
           <li>✓ Cloud-synkat</li>
@@ -507,12 +760,64 @@
         </ul>
       </div>
     </div>
+
+    <p class="pricing-note">
+      💳 Billigare än en barnbok. Roligare än samma saga för 47:e gången.
+    </p>
+  </section>
+
+  <section class="faq">
+    <h2>Vanliga frågor</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h3>Är AI-sagor säkra för barn?</h3>
+        <p>
+          Ja! AI:n följer strikta regler: svenska språket, åldersanpassat ordval,
+          inga läskiga element. Alla sagor granskas av algoritmer för barnsäkert innehåll.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Blir det samma saga varje gång?</h3>
+        <p>
+          Nej! Även om barnet väljer "groda + slottet" två gånger får hen olika
+          berättelser. Vill ni ha samma saga igen? Tryck på hjärtat för att spara.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Måste barnet använda skärm?</h3>
+        <p>
+          Nej! Du läser från telefonen – precis som en vanlig bok.
+          Inga videos, inget "tryck här", bara text och emoji.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Vad händer efter 7 dagars provperiod?</h3>
+        <p>
+          Du kan fortsätta använda sparade sagor gratis.
+          För att skapa nya AI-sagor behöver du Premium (29 kr/mån).
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Kan jag dela sagor med mormor/farmor?</h3>
+        <p>
+          Ja! Varje saga kan exporteras som PDF och skickas via email/WhatsApp.
+          (Kommer snart!)
+        </p>
+      </div>
+    </div>
   </section>
 
   <section class="cta-section">
-    <h2>Redo att börja?</h2>
-    <p>Prova Kojan gratis med demo-läge. Inget konto behövs.</p>
-    <a href="#" class="cta-button">Ladda ner nu</a>
+    <h2>Redo för äventyr?</h2>
+    <p>Prova Kojan gratis i 7 dagar – 3 AI-sagor på köpet 🎁</p>
+    <a href="https://play.google.com/store/apps/details?id=se.jacode.koja" class="cta-button">
+      Ladda ner nu – Gratis
+    </a>
+    <p class="cta-note">iOS & Android • Ingen bindning • Avsluta när som helst</p>
   </section>
 
   <footer>
